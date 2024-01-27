@@ -37,7 +37,7 @@ Suffix Arrays by Yale University Computer Science Department: https://www.cs.yal
 Graph Theory: https://www.baeldung.com/cs/graph-theory-intro <br />
 Paper by Liao et al: https://doi.org/10.1093/bioinformatics/btt656 
 Hash Tables: https://www.baeldung.com/cs/hash-tables <br />
-Paper by Chisanga et alhttps://doi.org/10.1186/s12859-022-04644-8 <br />
+Paper by Chisanga et al: https://doi.org/10.1186/s12859-022-04644-8 <br />
 
 
 
