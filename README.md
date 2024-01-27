@@ -18,15 +18,15 @@ Cutadapt makes use of a modified version of global alignment as an adapter trimm
 
 ## Second Step of Processing NGS Sequencing Data: Mapping of the Reads
 
-
+In RNA-Seq analysis, if a reference genome is available for an organism, then the data analysis is usually performed where short sequencing reads are mapped against an annotated reference genome and this is known as genome mapping (Paper by Conesa et al., 2016). The reference genome is a scientifically accepted genome sequence as a standard to compare sequences of interest for a specific organism (Wetterstrand, 2023). As Drosophila melanogaster is one of the widely studied model organisms, the reference genome sequence has been available since 2000.
 
 
 References: <br />
-https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/read-length.html <br />
-https://microbenotes.com/local-global-multiple-sequence-alignment <br />
-https://www.techopedia.com/definition/10467/burrows-wheeler-transform-bwt <br />
-About Cutadapt algorithms: https://doi.org/10.14806/ej.17.1.200 (Original paper by Martin), https://cutadapt.readthedocs.io/en/stable/algorithms.html (Cutadapt online manual documentation) <br />
-
+Illumina NGS: https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/read-length.html <br />
+Local & Global Alignments: https://microbenotes.com/local-global-multiple-sequence-alignment <br />
+Burrows Wheeler Transformation: https://www.techopedia.com/definition/10467/burrows-wheeler-transform-bwt <br />
+Cutadapt: https://doi.org/10.14806/ej.17.1.200 (Original paper by Martin), https://cutadapt.readthedocs.io/en/stable/algorithms.html (Cutadapt online manual documentation) <br />
+Paper by Conesa et al., 2016: https://doi.org/10.1186/s13059-016-0881-8
 
 
 
