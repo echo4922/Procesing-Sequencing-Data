@@ -20,7 +20,7 @@ HISAT2  is a fast genome mapping software whose acronym stands for Hierarchical 
 
 ## Third Step of Processing NGS Sequencing Data: Mapping of the Reads
 
-In the RNA-seq analysis, an important step is counting the number of reads mapping to each genomic feature because the raw aligned BAM output is not sufficient for biological interpretation (Liao et al., 2014). The process of counting reads is known as reads summarization or reads quantification. The featureCounts is a fast reads summarization program by assigning sequence reads to genomic features. The genomic feature is a general term describing any genomic region such as genes and introns/exons.  Often, two terms, genomic features (features) and counts are used interchangeably. The featureCounts summarizes counts by counting all reads that overlap any exon for each gene based on a gene annotation (Source: original paper by Liao et al., 2014). The gene annotation includes chromosomal locations of exons for numerous genes (Chisanga et al., 2022). GTF (Gene Transfer Format) is a file format for gene annotations, and it is derived from version 2 of GFF (General Feature Format). 
+In the RNA-seq analysis, an important step is counting the number of reads mapping to each genomic feature because the raw aligned BAM output is not sufficient for biological interpretation (Liao et al., 2014). The process of counting reads is known as reads summarization or reads quantification. The featureCounts is a fast reads summarization program by assigning sequence reads to genomic features. The genomic feature is a general term describing any genomic region such as genes and introns/exons.  Often, two terms, genomic features (features) and counts are used interchangeably. The featureCounts summarizes counts by counting all reads that overlap any exon for each gene based on a gene annotation (Source: original paper by Liao et al., 2014). The gene annotation includes chromosomal locations of exons for numerous genes (Source: original paper by Chisanga et al). GTF (Gene Transfer Format) is a file format for gene annotations, and it is derived from version 2 of GFF (General Feature Format). The algorithm of featureCounts is based on a four-step process. First, a hash table is generated for the reference sequence names. In computer science, hashing is a process that takes input data with different lengths and produces a fixed length as an output using hash codes. The hash table is a type of data structure to store data by the hashing process (Source: Baeldung.com). The hash table in featureCounts is important because it allows a fast matching between sequence names found in the SAM/BAM file and the GTF annotation file. Second, features in the gene annotation file are sorted by the leftmost base start positions. Third, a hierarchy is created by dividing the sequences of gene annotation files into 128-Kilo base (Kb) bins and the features are assigned into genomic bins based on starting positions. Within each bin, features are equally grouped into blocks. The number of blocks in a bin equals the square root of the number of features in each bin such that the number of features in a block closely equals the number of blocks. The hierarchical data structure is a key element of the algorithm because it speeds up the read assignment. Lastly, the algorithm assigns the reads depending on the level of summarization (feature level or meta-feature level). The summarization at the feature level uses information on exons while the summarization at the meta-feature level uses information on genes (Liao et al., 2014). 
 
 References: <br />
 Illumina NGS: https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/read-length.html <br />
@@ -34,10 +34,10 @@ Index: https://chartio.com/learn/databases/how-does-indexing-work/
 FM Index by Ferragina & Venturini: https://pages.di.unipi.it/ferragina/Libraries/fmindexV2/index.html <br />
 Paper by Kim et al: https://doi.org/10.1038/nmeth.3317, https://doi.org/10.1038/s41587-019-0201-4 <br />
 Suffix Arrays by Yale University Computer Science Department: https://www.cs.yale.edu/homes/aspnes/pinewiki/SuffixArrays.html <br />
-Graph Theory:https://www.baeldung.com/cs/graph-theory-intro <br />
-Paper by Liao et al: https://doi.org/10.1093/bioinformatics/btt656
-
-
+Graph Theory: https://www.baeldung.com/cs/graph-theory-intro <br />
+Paper by Liao et al: https://doi.org/10.1093/bioinformatics/btt656 
+Hash Tables: https://www.baeldung.com/cs/hash-tables <br />
+Paper by Chisanga et alhttps://doi.org/10.1186/s12859-022-04644-8 <br />
 
 
 
